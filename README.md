@@ -63,11 +63,11 @@ I aggregated the data from the user journey above to calculate average turnaroun
 ## Results
 1) User acquisition is increasing steadily from January to April 2024. 
 2) The average days to the first appointment shows an increasing trend for cohorts from January to March. January cohort took 25 says, March took 49.82 days and April took 48.4 days from sign up to completed first appointment.
-3) This suggests that the user activation is taking longer. 
-4) Conversion rate is generally robust with 89%-100% of users who sign up are completing their first appointment week over week.
-5) Average days to first order after completed appointment ranges from ~4 to ~10 days, with an average of ~7.5 days. 
+   This suggests that the user activation is taking longer. 
+3) Conversion rate is generally robust with 89%-100% of users who sign up are completing their first appointment week over week.
+4) Average days to first order after completed appointment ranges from ~4 to ~10 days, with an average of ~7.5 days. 
 6) There’s some drop off among users who completed an appointment and those who purchased their first order. In the last two weeks with >100 signed up users, the conversion rate seems strong with >82% of users purchasing an order. 
-7) The average value of the first order is showing a decline from january ($194) to April cohort ($151.58)
+5) The average value of the first order is showing a decline from january ($194) to April cohort ($151.58)
    ![image](https://github.com/user-attachments/assets/4ada0dc6-9528-44ea-9a60-a9fe80b55254)
 
 
