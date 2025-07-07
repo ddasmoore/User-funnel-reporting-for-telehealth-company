@@ -11,11 +11,11 @@
   *   [Recommendations](#Recommendations )
 
 ## About-the-project
-The goal of this project is to generate user funnel insights for a dermatological telehealth company called GlowRx. When users sign up to  GlowRx, they first have a telehealth appointment with a dermatologist where they are given skincare regimen recommendations.
-Following this appointment, users purchase products that are shipped to them on a quarterly basis. I conducted 2 main analyses:
+The goal of this project is to generate user funnel insights for a dermatological telehealth company called GlowRx. When users sign up for GlowRx, they first schedule a telehealth appointment with a dermatologist where they are given skincare regimen recommendations.
+Following this appointment, users can purchase products that are shipped to them on a quarterly basis. I conducted 2 main analyses to understand user behavior on the platform:
 1) Funnel report capturing each step in the user journey from sign up to first appointment, from first appointment to first order, total value of first order and turnaround time for each step
 2) Weekly statistics report capturing average turnaround times between each step and the total number of users signed up per week.
-These analyses will allow GlowRx to spot delays or inefficiency in new user sign up journeys to be able to optimnize user experience and increase revenue.
+These analyses will allow GlowRx to spot delays or inefficiencies in new user sign up journeys to be able to optimnize user experience and increase revenue.
 
 
 ## Executive-summary-of-insights
@@ -38,7 +38,7 @@ I analyzed the data using SQL in Snowflake.
 The analysis consisted of 3 main steps:
 1) **Data cleaning**
 
-I conducted a data quality check to check for any data inconsistencies or missing values. I checked for null user_id in the appointment table and excluded them from analyses going forward.
+I conducted a data quality check to eliminate any data inconsistencies and identify missing values. I checked for null user_id in the appointment table and excluded them from analyses going forward.
 I checked for any duplicated user_id in the users table. No duplicates were found. I also changed data types to make it easier to reference them later in the analysis e.g., type cast dates into date variable type.
 ![image](https://github.com/user-attachments/assets/c4c1bdab-cef1-45c3-85c9-5331fd445f65)
 
@@ -51,7 +51,7 @@ I took the clean data (excluding any null user_ids) and used a ROW_NUMBER functi
 I used DENSE_RANK to find the first prescription order after the completed appointment per user. I computed the order total per user.
 ![image](https://github.com/user-attachments/assets/b1fe9d9c-4130-46de-bede-4e0123754cc3)
 
-I joined user id, sign up date, completed first appointment and order date and total together so that I can calculate turnaround times (TAT) between sign up and appointment and between appointment and order dates at the final step in creating the user journey.
+I joined user id, sign up date, completed first appointment and order date and order total together so that I can calculate turnaround times (TAT) between sign up and appointment and between appointment and order dates at the final step in creating the user journey.
   ![image](https://github.com/user-attachments/assets/6d9b2864-9b8a-4e59-9ab9-76af9989c252)
 
 3) **Calculate weekly statistics**
@@ -61,13 +61,13 @@ I aggregated the data from the user journey above to calculate average turnaroun
 
 
 ## Results
-1) User acquisition is increasing steadily from January to April 2024. 
-2) The average days to the first appointment shows an increasing trend for cohorts from January to March. January cohort took 25 says, March took 49.82 days and April took 48.4 days from sign up to completed first appointment.
+1) User acquisition is increasing steadily from January to April. 
+2) The average days from sign up to the first appointment shows an increasing trend for cohorts from January to Aril. January cohort took 25 says, March took 49.82 days and April took 48.4 days from sign up to completed first appointment.
    This suggests that the user activation is taking longer. 
 3) Conversion rate is generally robust with 89%-100% of users who sign up are completing their first appointment week over week.
 4) Average days to first order after completed appointment ranges from ~4 to ~10 days, with an average of ~7.5 days. 
 6) There’s some drop off among users who completed an appointment and those who purchased their first order. In the last two weeks with >100 signed up users, the conversion rate seems strong with >82% of users purchasing an order. 
-5) The average value of the first order is showing a decline from january ($194) to April cohort ($151.58)
+5) The average value of the first order is showing a decline from January ($194) to April cohort ($151.58)
    ![image](https://github.com/user-attachments/assets/4ada0dc6-9528-44ea-9a60-a9fe80b55254)
 
 
@@ -83,5 +83,5 @@ I aggregated the data from the user journey above to calculate average turnaroun
    a high volume of users signing up. We can see if this trend remains the same or declines further as more users sign up.
    
 4) The declining trend in average first order value from January to April cohorts impacts revenue. It’s possible that the increased time between sign up and first completed appointment may be related to the decreasing order value for
-   the first purchase made. Consider investigating user attitudes at the end of the completed appointment and how they are selecting what to purchase to see if there is a link between time to appointment, appointment satisfaction and order amount.
+   the first purchase made. Consider investigating user attitudes at the end of the completed appointment and understanding how they are selecting what to purchase to see if there is a link between time to appointment, appointment satisfaction and order amount.
    Consider testing introductory offers or cross-selling items for new users to encourage higher initial spend. 
