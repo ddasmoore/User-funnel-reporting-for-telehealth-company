@@ -11,16 +11,18 @@
   *   [Recommendations](#Recommendations )
 
 ## About-the-project
-The goal of this project is to generate user funnel insights for a dermatological telehealth company called GlowRx. When users sign up for GlowRx, they first schedule a telehealth appointment with a dermatologist where they are given skincare regimen recommendations.
-Following this appointment, users can purchase products that are shipped to them on a quarterly basis. I conducted 2 main analyses to understand user behavior on the platform:
+The goal of this project was to generate user funnel insights for GlowRx-a dermatological telehealth provider- to capture any delays or inefficiencies in the user sign up journey that could impact user experience or revenue.
+
+When users sign up at GlowRx, they first schedule a telehealth appointment with a dermatologist where they are given skincare regimen recommendations.
+Following this appointment, users can purchase products that are shipped to them on a quarterly basis. I conducted 2 main analyses to examine user behavior on the platform:
 1) Funnel report capturing each step in the user journey from sign up to first appointment, from first appointment to first order, total value of first order and turnaround time for each step
 2) Weekly statistics report capturing average turnaround times between each step and the total number of users signed up per week.
-These analyses will allow GlowRx to spot delays or inefficiencies in new user sign up journeys to be able to optimnize user experience and increase revenue.
+
 
 
 ## Executive-summary-of-insights
-1) Roses: Overall user acquistion has increased from January to April. Convertion rates from sign up to first appointment is generally robust with 89%-100% of users who sign up are also completing their first appointment.
-3) Thorns: Average days from sign up to first appointment shows an increasing trend from January to April, suggesting that user activation is taking longer. Average order value of the first order has also declined from January to April.
+1) Roses: Overall user acquistion increased from January to April. Convertion rates from sign up to first appointment is generally robust with 89%-100% of users who sign up are also completing their first appointment.
+3) Thorns: Average days from sign up to first appointment showed an increasing trend from January to April, suggesting that user activation . Average order value of the first order also declined from January to April.
 
 ## Technical-Details-and-detailed-insights
 
@@ -61,27 +63,25 @@ I aggregated the data from the user journey above to calculate average turnaroun
 
 
 ## Results
-1) User acquisition is increasing steadily from January to April. 
-2) The average days from sign up to the first appointment shows an increasing trend for cohorts from January to Aril. January cohort took 25 says, March took 49.82 days and April took 48.4 days from sign up to completed first appointment.
-   This suggests that the user activation is taking longer. 
-3) Conversion rate is generally robust with 89%-100% of users who sign up are completing their first appointment week over week.
-4) Average days to first order after completed appointment ranges from ~4 to ~10 days, with an average of ~7.5 days. 
-6) There’s some drop off among users who completed an appointment and those who purchased their first order. In the last two weeks with >100 signed up users, the conversion rate seems strong with >82% of users purchasing an order. 
-5) The average value of the first order is showing a decline from January ($194) to April cohort ($151.58)
-   ![image](https://github.com/user-attachments/assets/4ada0dc6-9528-44ea-9a60-a9fe80b55254)
+The week over week user signup to order funnel captured inefficiencies in the user journey funnel such as increased user activation period from January to April and decline in first order value during the same period. 
+
+<img width="1782" height="396" alt="image" src="https://github.com/user-attachments/assets/77b39391-1131-484e-bbd7-d696bf53a9a5" />
+
+Detailed findings:
+1) User acquisition increased steadily from January to April. 
+2) The average days from sign up to the first appointment showed an increasing trend for cohorts from January to Aril. January cohort took 25 says, March took 49.82 days and April took 48.4 days from sign up to completed first appointment.
+   This suggested that the user activation was taking longer. 
+3) Conversion rate was generally robust with 89%-100% of users who signed up were completing their first appointment week over week.
+4) Average days to first order after completed appointment ranged from ~4 to ~10 days, with an average of ~7.5 days. 
+5) There was some drop off among users who completed an appointment and those who purchased their first order. In the last two weeks with >100 signed up users, the conversion rate seemed strong with >82% of users purchasing an order. 
+6) The average value of the first order declined from January ($194) to April cohort ($151.58)
+  
 
 
 ## Recommendations 
-1) User acquisition strategy seems to be working well at first glance with steadily increasing user sign ups from January to April. However, without knowing what the acquisition targets are,
-   it’s hard to gauge whether the company is growing as fast as expected. I would discuss acquisition targets with the company as a follow up. I would recommend analyzing acquisition numbers and costs from different marketing channels.
-   
-2) User activation from sign up to first completed appointment is taking longer when comparing January cohort to April cohort, which is concerning. However, it seems that despite taking longer,
-   overall percentage over users activating is fairly robust. I would recommend talking with users to understand why it is taking longer to complete an appointment and address any pain points.
-   Some potential pain points could be friction in signup to booking flow, users could be forgetting to schedule appointments or not seeing enough appointment availability.
-  
-3) There is some drop off between users completing their first appointment and making an order. I would recommend monitoring this metric for now as >82% of signed up users have completed an order in the last two weeks with
-   a high volume of users signing up. We can see if this trend remains the same or declines further as more users sign up.
-   
-4) The declining trend in average first order value from January to April cohorts impacts revenue. It’s possible that the increased time between sign up and first completed appointment may be related to the decreasing order value for
-   the first purchase made. Consider investigating user attitudes at the end of the completed appointment and understanding how they are selecting what to purchase to see if there is a link between time to appointment, appointment satisfaction and order amount.
-   Consider testing introductory offers or cross-selling items for new users to encourage higher initial spend. 
+Findings support the following next steps:
+1) Ucovering causes of delay from sign up to first appointment. Potential pain points include friction in signup to booking flow, users forgetting to schedule appointments or not seeing enough appointment availability.
+2) Monitoring conversion rate from first appointment to making an order using week over week sign up funnel to track whether the conversion remain the same or decline further.
+3) Investigation of declining average first order value from January to April as this impacts revenue. This decline may be correlated with the increase in time from sign up to first appointment, customer dissatisaction with first appoinment or both. Potential solutions include making sure
+   dermatoglist appointments are not backlogged and customers see available appointments, collecting feedback after first appointment to see if customer experience can be improved, testing introductory offers for new users to encourage higher initial spend. 
+
