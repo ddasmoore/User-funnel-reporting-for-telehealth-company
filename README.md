@@ -34,13 +34,13 @@ The dataset consists of three tables:
 The analysis focused on creating a user journey funnel capturing sign up to appointment to first order as well as weekly statistics capturing average turnaround times between each step.
 
 ## Tools-and-libraries
-I analyzed the data using SQL in Snowflake.
+The data was analyzed using SQL in Snowflake.
 
 ## Data-analysis
 The analysis consisted of 3 main steps:
 1) **Data cleaning**
 
-I conducted a data quality check to eliminate any data inconsistencies and identify missing values. I checked for null user_id in the appointment table and excluded them from analyses going forward.
+Data quality check to eliminate any data inconsistencies and identify missing values. I checked for null user_id in the appointment table and excluded them from analyses going forward.
 I checked for any duplicated user_id in the users table. No duplicates were found. I also changed data types to make it easier to reference them later in the analysis e.g., type cast dates into date variable type.
 ![image](https://github.com/user-attachments/assets/c4c1bdab-cef1-45c3-85c9-5331fd445f65)
 
@@ -79,7 +79,7 @@ Detailed findings:
 
 
 ## Recommendations 
-Findings support the following next steps:
+Findings support the following:
 1) Ucovering causes of delay from sign up to first appointment. Potential pain points include friction in signup to booking flow, users forgetting to schedule appointments or not seeing enough appointment availability.
 2) Monitoring conversion rate from first appointment to making an order using week over week sign up funnel to track whether the conversion remain the same or decline further.
 3) Investigation of declining average first order value from January to April as this impacts revenue. This decline may be correlated with the increase in time from sign up to first appointment, customer dissatisaction with first appoinment or both. Potential solutions include making sure
