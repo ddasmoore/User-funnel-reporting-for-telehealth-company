@@ -22,8 +22,7 @@ The goal of this project was two fold:
 1) Roses: Overall user acquistion increased from January to April. Convertion rates from sign up to first appointment is generally robust with 89%-100% of users who sign up are also completing their first appointment.
 3) Thorns: Average days from sign up to first appointment showed an increasing trend from January to April, suggesting that user activation . Average order value of the first order also declined from January to April.
 
-<img width="1736" height="999" alt="image" src="https://github.com/user-attachments/assets/5e980842-a436-4964-8290-5d31966dec2e" />
-
+<img width="1756" height="961" alt="image" src="https://github.com/user-attachments/assets/0c3974bc-5c26-4083-9231-b64f3ac146dd" />
 
 
 ## Technical-Details-and-detailed-insights
@@ -44,23 +43,28 @@ The analysis consisted of 3 main steps:
 
 Data quality was checked to eliminate any data inconsistencies and to identify missing values. Null user_id were identified in the appointment table and they were excluded from analyses going forward.
 No duplicate user_ids were found. Data types were changed to make it easier to reference them later in the analysis e.g., type cast dates into date variable type.
+
 ![image](https://github.com/user-attachments/assets/c4c1bdab-cef1-45c3-85c9-5331fd445f65)
 
 2) **Create a user funnel**
 
 To create the user funnel following steps were taken:
 Started with clean data (excluding any null user_ids) and used a ROW_NUMBER function to rank all appointments (scheduled, completed) to find the completed appointment dates. The first completed appointment per user (users can have multiple appointments every 3 months) was identified. 
+
 ![image](https://github.com/user-attachments/assets/b3a32a20-f86a-4757-8abb-245b36e0afcd)
 
 DENSE_RANK was used to find the first prescription order after the completed appointment per user. The order total per user was computed.
+
 ![image](https://github.com/user-attachments/assets/b1fe9d9c-4130-46de-bede-4e0123754cc3)
 
 Joined user id, sign up date, completed first appointment and order date and order total together so that turnaround times (TAT) between sign up and appointment and between appointment and order dates were calculated at the final step in creating the user journey.
+
   ![image](https://github.com/user-attachments/assets/6d9b2864-9b8a-4e59-9ab9-76af9989c252)
 
 3) **Calculate weekly statistics**
    
 Aggregated the data from the user journey above to calculate average turnaround times (TAT) and conversion rates
+
 ![image](https://github.com/user-attachments/assets/54403df3-02d0-489b-bde4-749e066ac01c)
 
 
